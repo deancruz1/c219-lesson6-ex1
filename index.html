@@ -20,7 +20,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #818589;
         }
 
         .text-content {
@@ -37,23 +36,27 @@
             justify-content: center;
         }
 
-        .img-fluid {
-            max-width: 80%;
+        @media (max-width: 768px) {
+            .text-content {
+                align-items: center;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- Add a fluid container so that the hero fills the browser width -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 text-content">
-                <h1>She depends on you.</h1>
-                <p>We depend on you.</p>
-                <button type="button" class="btn btn-primary">Sad Machine</button>
-            </div>
-            <div class="col-md-6 img-content">
-                <img src="./img.png" class="img-fluid" alt="Porter Robinson photo">
+    <div class="container-fluid bg-primary bg-gradient-shadow">
+        <div class="container text-center">
+            <div class="row text-light pt-5">
+                <div class="col-md-7 text-content pb-5">
+                    <h1 class="ps-2 pt-5">She depends on you.</h1>
+                    <p class="lead ps-2">We depend on you.</p>
+                    <button type="button" class="btn btn-dark ms-2 fw-bold mb-5">Sad Machine</button>
+                </div>
+                <div class="col-md-5 img-content">
+                    <img src="./img.png" class="img-fluid" alt="Porter Robinson photo">
+                </div>
             </div>
         </div>
     </div>
